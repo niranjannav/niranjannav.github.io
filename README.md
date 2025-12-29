@@ -1,109 +1,108 @@
-# Niranjan Navaneethan - Portfolio Website
+# Niranjan Navaneethan – Systems-Oriented Resume
 
-A modern, responsive portfolio website showcasing my work as a Senior Data Scientist specializing in AI/ML, RAG systems, and LLM applications.
+A systems-oriented professional website designed with editorial principles: clarity over decoration, evidence over claims, hierarchy over aesthetics.
 
-## Features
+## Design Philosophy
 
-- Clean, modern design with smooth animations
-- Fully responsive (mobile, tablet, desktop)
-- Easy to navigate single-page layout
-- Sections for Experience, Projects, Skills, Education, and Awards
-- Downloadable resume
-- Direct contact links
+This is not a portfolio site. It's a **systems resume** built for senior hiring managers and technical recruiters.
+
+**Core Principles:**
+- **Systems thinking**: Experience organized by problem domains (GenAI/LLM, Forecasting, NLP), not chronological jobs
+- **Context → Constraints → Decisions → Impact**: Every system entry shows the reasoning, not just the result
+- **Editorial design**: Swiss-style typography, generous whitespace, minimal color
+- **Scannable hierarchy**: Information architecture works without color or animation
+- **Calm confidence**: No marketing language, no gimmicks, just evidence
+
+**Design Language:**
+- Serif typography (Crimson Text) for editorial credibility
+- Sans-serif (Inter) for technical clarity
+- Neutral palette (mostly grayscale)
+- No animations, no icons, no decorative elements
+- Desktop-first, optimized for 2-5 minute evaluation
+
+## Structure
+
+1. **Identity Block**: Name, role, professional thesis, contact
+2. **Systems Resume**: 3 problem domains with detailed system entries
+   - GenAI & LLM Systems for Analytics
+   - Forecasting & Decision Optimization
+   - NLP & Document Intelligence
+3. **Technical Capabilities**: Skills grouped by depth (Deep vs Production vs Familiar)
+4. **Evidence & Recognition**: Patents, publications, awards
+5. **Education**
+6. **Employment Timeline**: Reference section for verification
 
 ## Deployment to GitHub Pages
 
-Follow these steps to deploy your website to GitHub Pages:
+### Step 1: Create Repository
 
-### Step 1: Create a GitHub Repository
+1. Go to GitHub and create a new repository
+2. Name: `<your-username>.github.io` (e.g., `niranjannav.github.io`)
+3. Visibility: **Public**
+4. Do NOT initialize with README
 
-1. Go to [GitHub](https://github.com) and sign in
-2. Click the '+' icon in the top right and select 'New repository'
-3. Name your repository: `<your-username>.github.io` (replace `<your-username>` with your actual GitHub username)
-   - Example: If your username is `niranjan-nav`, name it `niranjan-nav.github.io`
-4. Make the repository **Public**
-5. Do NOT initialize with README (we already have one)
-6. Click 'Create repository'
-
-### Step 2: Initialize Git and Push Your Files
-
-Open your terminal in this directory and run:
+### Step 2: Push Code
 
 ```bash
-# Initialize git repository
+cd "d:\Big Tech Job"
+
+# If not already initialized
 git init
-
-# Add all files
 git add .
+git commit -m "Systems-oriented resume website"
 
-# Commit the files
-git commit -m "Initial commit: Portfolio website"
-
-# Add your GitHub repository as remote (replace with your actual repository URL)
-git remote add origin https://github.com/<your-username>/<your-username>.github.io.git
-
-# Push to GitHub
+# Add remote and push
+git remote add origin https://github.com/niranjannav/niranjannav.github.io.git
 git branch -M main
 git push -u origin main
 ```
 
 ### Step 3: Enable GitHub Pages
 
-1. Go to your repository on GitHub
-2. Click on 'Settings' tab
-3. Scroll down to 'Pages' section in the left sidebar
-4. Under 'Source', select 'main' branch
-5. Click 'Save'
+1. Go to repository Settings → Pages
+2. Source: Deploy from branch **main**
+3. Folder: **/ (root)**
+4. Save
 
-### Step 4: Access Your Website
+### Step 4: Live URL
 
-Your website will be live at: `https://<your-username>.github.io`
+Your site will be live at: **`https://niranjannav.github.io`**
 
-It may take a few minutes for the site to go live after pushing.
+(Takes 2-5 minutes after first push)
 
-## Updating Your Website
-
-To update your website:
-
-1. Make changes to your files locally
-2. Run these commands:
-
-```bash
-git add .
-git commit -m "Update website"
-git push
-```
-
-Your changes will be live within a few minutes.
-
-## Customization
+## Updating Content
 
 ### Update Resume PDF
 
-Replace `Resume-Niranjan Navaneethan.pdf` with your latest resume PDF. Make sure to:
-1. Keep the same filename or update the link in [index.html](index.html) (line 21)
-2. Commit and push the changes
+Replace `Resume-Niranjan Navaneethan.pdf` with latest version, then:
 
-### Update Content
+```bash
+git add Resume-Niranjan Navaneethan.pdf
+git commit -m "Update resume PDF"
+git push
+```
 
-Edit [index.html](index.html) to update:
-- Contact information
-- Work experience
-- Projects
-- Skills
-- Education details
-- Awards
+### Edit System Entries
 
-### Customize Colors
+Edit `index.html` to update:
+- System entries (Context, Constraints, Decisions, Impact)
+- Technical capabilities
+- Evidence items
 
-Edit [styles.css](styles.css) and modify the CSS variables at the top:
+Structure is semantic HTML with clear class names.
+
+### Customize Typography
+
+Edit `styles.css` CSS variables:
 
 ```css
 :root {
-    --primary-color: #2563eb;  /* Main blue color */
-    --secondary-color: #8b5cf6; /* Purple accent */
-    --accent-color: #10b981;    /* Green accent */
-    /* ... other colors ... */
+    --font-serif: 'Crimson Text', Georgia, serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+
+    --color-text: #1a1a1a;
+    --color-text-secondary: #4a4a4a;
+    /* ... */
 }
 ```
 
@@ -111,38 +110,36 @@ Edit [styles.css](styles.css) and modify the CSS variables at the top:
 
 ```
 .
-├── index.html              # Main HTML file
-├── styles.css              # Styling
-├── script.js               # JavaScript functionality
-├── Resume-Niranjan Navaneethan.pdf  # Your resume
-├── .gitignore             # Git ignore file
-└── README.md              # This file
+├── index.html              # Systems resume (semantic HTML)
+├── styles.css              # Editorial design system
+├── script.js               # Minimal (currently empty)
+├── Resume-Niranjan Navaneethan.pdf
+├── .gitignore
+└── README.md
 ```
 
-## Technologies Used
+## Quality Criteria
 
-- HTML5
-- CSS3 (with CSS Variables and Flexbox/Grid)
-- Vanilla JavaScript
-- Google Fonts (Inter)
+Before deploying updates, verify:
+
+- ✅ Does seniority register within 5 seconds?
+- ✅ Is impact measurable and specific?
+- ✅ Can the page be scanned without reading everything?
+- ✅ Does the design disappear in service of content?
+- ✅ Would this stand next to Stripe, Linear, or Figma documentation?
 
 ## Browser Support
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+- Modern browsers (Chrome, Firefox, Safari, Edge)
+- Responsive design (mobile, tablet, desktop)
+- Print-optimized styles included
 
 ## License
 
-This is a personal portfolio website. Feel free to use this template for your own portfolio, but please update the content with your own information.
-
-## Contact
-
-- Email: niranjan.nav95@gmail.com
-- LinkedIn: [linkedin.com/in/niranjan-navaneethan](https://www.linkedin.com/in/niranjan-navaneethan/)
-- Location: Austin, TX
+Personal resume website. Content is specific to Niranjan Navaneethan.
+Design system and structure can be adapted for your own use.
 
 ---
 
-Built with passion for data science and AI
+**Site reflects systems built, decisions made, impact measured.**
+Last updated: December 2024
